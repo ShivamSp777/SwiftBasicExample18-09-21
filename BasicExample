@@ -1,0 +1,321 @@
+import UIKit
+
+var str = "Hello, playground"
+//var and constant decleartion
+var a: Int = 10
+var b: Int = 20
+let c: Int = 20
+
+//Airthmatic operator
+
+
+var sum = a + b
+//print(sum)
+//print(a * b) // 200
+//print(b / a) // 2
+//print (b % a) // 0
+
+// Comparision Operator
+ var x = 10
+if(x == 10){
+    //print("X is equal to Given Number")
+}
+else if (x != 10){
+    //print("Both are not equal")
+}
+//OR Operator
+var n = 200
+var m = 200
+if(n == m || n != m){
+   // print("The n is equal to m ")
+  } else{
+       // print("The m is not equal to m ")
+    }
+
+// Compound Opertaor
+var s = 10
+s -= 2
+//print(s)
+
+// Ternary Opertaor
+var e = 10
+var f = 20
+//print(e == f ? "The Nuber is same" : "The Number is different")
+
+// Array count
+var names = ["Allen", "Joy", "Alise","Bob"]
+var count = names.count
+for i in 0..<count {
+    //print("person is \(i+1) called \(names[i])")
+}
+
+// Switch Statement
+var n1 = 1
+     switch n1  {
+    case 1:
+        print("Today is sunday")
+    case 2:
+        print("Today is monday")
+    default:
+     print("Invalid Input")
+     }
+
+// for Loop
+var natural = 100
+for i in 1...natural {
+    //print(i)
+}
+//
+for counter in 1...5 {
+    var sum = 0
+    sum += counter
+}
+//print(sum)
+// While Loop
+var count2 = 5
+while count2 > 0{
+    //print("Well defined")
+    count2 -= 1
+}
+
+// repeat While
+var count1 = 5
+repeat {
+   // print ("Continue")
+    count1 -= 1
+} while count1 > 0
+
+
+// concatenate two string
+let str1 = " Hello "
+let str2 = " Welcome "
+var add = str1 + str2
+//print("The String is: \(add)")
+
+// append method
+var aa: String = "Bye"
+add.append(aa)
+//print(add)
+
+// Shorthand Notation String
+var instruction = "Good"
+instruction += str1
+//print(instruction)
+
+// Check Empty String
+let name = "Text"
+if name.isEmpty{
+ print("Hello")
+}else{
+ //   print("String Avialable: \(name)")
+}
+
+// Print String Char using for loop
+for char in "Shivam!" {
+  //  print(char)
+}
+  // Count Chareter from String
+var word = "cafe"
+//print("the number of characters in: \(word) is: \(word.count)")
+
+// Find String Index
+var greet = "Fun & joy"
+var index = greet[greet.startIndex]
+var ind   = greet[greet.index(after: greet.startIndex)]
+var last  = greet[greet.index(before: greet.endIndex)]
+var value = greet[greet.index(greet.startIndex, offsetBy: 6)]
+//print(index)
+//print(ind)
+//print(last)
+//print(value)
+
+// insert & Remove charter/string
+ var ins = "Hello"
+ ins.insert("!", at: ins.endIndex)
+ ins.insert(contentsOf: "welcome", at: ins.endIndex)
+//print(ins)
+//Remove string
+ ins.remove(at: ins.index(before: ins.endIndex))
+ //print(ins)
+
+let greeting = "hello, Welcome"
+let xyz = greeting.firstIndex(of: ",") ?? greeting.endIndex
+let begnning =     greeting[..<xyz]
+let newString = String(begnning)
+print(newString)
+
+struct User {}
+
+func check(user: User) {
+    
+}
+
+check(user: User())
+
+// checkUser(User())
+if greeting.hasPrefix("") {
+    print(greeting)
+}
+print("---------")
+// Array createaton
+var name2: Array<String> = ["Indore", "Bhopal", "Delhi"]
+//print(name2)
+var names3: [String] = ["punjab", "Jaipur","Mumbai"]
+//print(names3)
+var num: Array<Int> = [10, 20, 30, 40]
+//print(num)
+var add1 =  name2 + names3
+//print(add1)
+
+var shoppingList: [String] = ["Apple", "Milk"]
+
+if shoppingList.isEmpty{
+//    print("The list is empty")
+//    print(shoppingList)
+}else{
+//   print("Some items are in list")
+//    print(shoppingList)
+}
+shoppingList.append("Orange")
+//print(shoppingList)
+shoppingList.insert("Grapes", at: 0)
+//print(shoppingList)
+shoppingList.remove(at: 2)
+//print(shoppingList)
+
+for item in shoppingList {
+   // print(item)
+}
+
+// set Example
+var letters = Set<Character>("abedefg")
+//print("letters is of type Set<Character> with: \(letters) and \(letters.count) items.")
+
+
+let oddDigit: Set = [1, 3, 5, 7, 9]
+let evenDigit: Set = [0, 2, 4, 6, 8]
+let primeNumber: Set = [2, 3, 5, 7, 11]
+var unionCheck = oddDigit.union(evenDigit).sorted()
+//print(unionCheck)
+
+var check = oddDigit.intersection(primeNumber).sorted()
+//print(check)
+
+//Dictionry Example
+let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4, "Elephant": 4]
+for (animalName, legCount) in numberOfLegs {
+   // print("\(animalName)s have \(legCount) legs")
+}
+
+ // Function
+func addNum()-> Int{
+    let p = 10
+    let q = 20
+    return p + q
+}
+ var addSum = addNum()
+    //print(addSum)
+func sumOf(p: Int, q: Int) -> Int{
+    return p + q
+  
+}
+var h = sumOf(p: 10, q: 40)
+//print(h)
+
+// Tuple may have multiple value......
+var product = (iphone: "X", price: 100000, user: "Joy")
+//print(product)
+//print(product.0)
+//print(product.1)
+//print(product.2)
+product.price = 120000
+//print(product.1)
+
+let dataprovider = (dic: ["name": "Ajay"], array: ["raj", "mumbai"], name: "Abhisek", id: 100)
+//print(dataprovider.0)
+//print(dataprovider.1)
+//print(dataprovider.2)
+//print(dataprovider.3)
+
+//Closure Function
+// Without parameter
+let firstOne: ()-> Void = {
+    //print("hello")
+}
+firstOne()
+
+//With One parameter
+let valueOf: (Int) -> Int = { (value1) in
+    
+    return value1
+}
+let sigleValue = valueOf(10)
+//print(sigleValue)
+
+// with two parameter
+let addNums: (Int, Int) -> String = {(val1, val2) -> String in
+    return String ("Sum is: \(val1 + val2)" )
+}
+let res = addNums(10,20)
+//print(res)
+
+// with Multiple argument
+let sumValue: (Int, Int, Int) -> Int = {(num1, num2, num3) in
+    return num1 + num2 + num3
+}
+//print(sumValue(10,20,70))
+
+let digitsList = [1, 2, 3, 4, 5]
+
+let sumValues = digitsList.reduce(0) { $0 + $1 }
+//print(sumValues)
+
+func getPhoneInfo() -> (series: String, prices: Double) {
+    return (series: "iPhoneX", prices: 1000.00)
+}
+let info = getPhoneInfo().series
+print(info)
+let infoprice = getPhoneInfo().prices
+print(infoprice)
+
+//Enum
+enum Days{
+    case Sunday
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
+
+}
+let today: Days = Days.Friday
+switch today {
+case .Sunday: print("Today is : \(Days.Sunday)")
+    
+case .Monday: print("Today is : \(Days.Monday)")
+    
+case .Tuesday: print("Today is : \(Days.Tuesday)")
+   
+case .Wednesday: print("Today is : \(Days.Wednesday)")
+    
+case .Friday: print("Today is : \(Days.Friday)")
+    
+default: print("Invalid Input")
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
